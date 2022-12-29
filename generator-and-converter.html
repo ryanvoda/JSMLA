@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Citation Generator for MLA and APA</title>
+</head>
+<body>
+    <!-- MLA BOOK -->
+    <div id="mla-book-section">
+        <h1>MLA Citation Generator (Book)</h1>
+        <p>Enter your book's details below to obtain a free MLA citation.</p>
+        <form id="mla-book-form">
+        <label for="lname">Last Name:</label><br>
+        <input type="text" id="lname1" name="lname"><br>
+        <label for="fname">First Name:</label><br>
+        <input type="text" id="fname1" name="fname"><br>
+        <label for="book_title">Book Title:</label><br>
+        <input type="text" id="book_title1" name="book_title"><br>
+        <label for="publisher">Publisher:</label><br>
+        <input type="text" id="publisher1" name="publisher"><br>
+        <label for="month">Month:</label><br>
+        <input type="text" id="month1" name="month"><br>
+        <label for="day">Day:</label><br>
+        <input type="text" id="day1" name="day"><br>
+        <label for="year">Year:</label><br>
+        <input type="text" id="year1" name="year"><br><br>
+        <input type="button" value="Generate Citation" onclick="generateBookCitation1()">
+        </form>
+        <br>
+        <p>MLA Book Citation (remember to indent from second line onwards):</p>
+        <p id="mla-book-citation"></p>
+
+        <script src="mla/functions.js"></script>
+        <script>
+        function generateBookCitation1() {
+            var lname1 = document.getElementById("lname1").value;
+            var fname1 = document.getElementById("fname1").value;
+            var book_title1 = document.getElementById("book_title1").value;
+            var publisher1 = document.getElementById("publisher1").value;
+            var month1 = document.getElementById("month1").value;
+            var day1 = document.getElementById("day1").value;
+            var year1 = document.getElementById("year1").value;
+
+            // Call the mlaBookCitation function with the values from the form inputs
+            var citation1 = mlaBookCitation(lname1, fname1, book_title1, publisher1, month1, day1, year1);
+
+            // Output the citation to the page
+            document.getElementById("mla-book-citation").innerHTML = citation1;
+
+            var lname1 = "";
+            var fname1 = "";
+            var book_title1 = "";
+            var publisher1 = "";
+            var month1 = "";
+            var day1 = "";
+            var year1 = "";
+        }
+        </script>
+    </div>
+
+    <!-- MLA WEBSITE -->
+    <div id="mla-website-section">
+        <h1>MLA Citation Generator (Website)</h1>
+        <p>Enter your book's details below to obtain a free MLA citation.</p>
+        <form id="mla-website-form">
+        <label for="lname">Last Name:</label><br>
+        <input type="text" id="lname2" name="lname"><br>
+        <label for="fname">First Name:</label><br>
+        <input type="text" id="fname2" name="fname"><br>
+        <label for="article_title">Article Title:</label><br>
+        <input type="text" id="article_title2" name="article_title"><br>
+        <label for="site_title">Site Title:</label><br>
+        <input type="text" id="site_title2" name="site_title"><br>
+        <label for="month">Month:</label><br>
+        <input type="text" id="month2" name="month"><br>
+        <label for="day">Day:</label><br>
+        <input type="text" id="day2" name="day"><br>
+        <label for="year">Year:</label><br>
+        <input type="text" id="year2" name="year"><br><br>
+        <label for="url">URL:</label><br>
+        <input type="text" id="url2" name="url"><br><br>
+        <input type="button" value="Generate Citation" onclick="generateCitation2()">
+        </form>
+        <br>
+        <p>MLA Website Citation (remember to indent from second line onwards):</p>
+        <p id="mla-website-citation"></p>
+
+        <script src="mla/functions.js"></script>
+        <script>
+        function generateCitation2() {
+            var lname2 = document.getElementById("lname2").value;
+            var fname2 = document.getElementById("fname2").value;
+            var article_title2 = document.getElementById("article_title2").value;
+            var site_title2 = document.getElementById("site_title2").value;
+            var month2 = document.getElementById("month2").value;
+            var day2 = document.getElementById("day2").value;
+            var year2 = document.getElementById("year2").value;
+            var url2 = document.getElementById("url2").value;
+            
+            // Call the mlaWebsiteCitation function with the values from the form inputs
+            var citation2 = mlaWebsiteCitation(lname2, fname2, article_title2, site_title2, month2, day2, year2, url2);
+            
+            // Output the citation to the page
+            document.getElementById("mla-website-citation").innerHTML = citation2;
+
+            var lname2 = "";
+            var fname2 = "";
+            var article_title2 = "";
+            var site_title2 = "";
+            var month2 = "";
+            var day2 = "";
+            var year2 = "";
+            var url2 = "";
+        }
+        </script>
+    </div>
+
+    <!-- APA BOOK -->
+    <div id="apa-book-section">
+        <h1>APA Citation Generator (Book)</h1>
+        <p>Enter your book's details below to obtain a free APA citation.</p>
+        <form id="apa-book-form">
+        <label for="lname">Last Name:</label><br>
+        <input type="text" id="lname3" name="lname"><br>
+        <label for="fname">First Name:</label><br>
+        <input type="text" id="fname3" name="fname"><br>
+        <label for="book_title">Book Title:</label><br>
+        <input type="text" id="book_title3" name="book_title"><br>
+        <label for="publisher">Publisher:</label><br>
+        <input type="text" id="publisher3" name="publisher"><br>
+        <label for="year">Year:</label><br>
+        <input type="text" id="year3" name="year"><br><br>
+        <input type="button" value="Generate Citation" onclick="generateCitation3()">
+        </form>
+        <br>
+        <p>APA Book Citation (remember to indent from second line onwards):</p>
+        <p id="apa-book-citation"></p>
+
+        <script src="mla/functions.js"></script>
+        <script>
+        function generateCitation3() {
+            var lname3 = document.getElementById("lname3").value;
+            var fname3 = document.getElementById("fname3").value;
+            var book_title3 = document.getElementById("book_title3").value;
+            var publisher3 = document.getElementById("publisher3").value;
+            var year3 = document.getElementById("year3").value;
+            
+            // Call the apaBookCitation function with the values from the form inputs
+            var citation3 = apaBookCitation(lname3, fname3, book_title3, publisher3, year3);
+            
+            // Output the citation to the page
+            document.getElementById("apa-book-citation").innerHTML = citation3;
+
+            // Reset values
+            var lname3 = "";
+            var fname3 = "";
+            var book_title3 = "";
+            var publisher3 = "";
+            var year3 = "";
+        }
+        </script>
+    </div>
+
+    <!-- APA WEBSITE -->
+    <div id="apa-website-citation">
+        <h1>APA Citation Generator (Website)</h1>
+        <p>Enter your book's details below to obtain a free APA citation.</p>
+        <form id="apa-website-form">
+        <label for="lname">Last Name:</label><br>
+        <input type="text" id="lname4" name="lname"><br>
+        <label for="fname">First Name:</label><br>
+        <input type="text" id="fname4" name="fname"><br>
+        <label for="article_title">Article Title:</label><br>
+        <input type="text" id="article_title4" name="article_title"><br>
+        <label for="site_title">Site Title:</label><br>
+        <input type="text" id="site_title4" name="site_title"><br>
+        <label for="month">Month:</label><br>
+        <input type="text" id="month4" name="month"><br>
+        <label for="day">Day:</label><br>
+        <input type="text" id="day4" name="day"><br>
+        <label for="year">Year:</label><br>
+        <input type="text" id="year4" name="year"><br><br>
+        <label for="url">URL:</label><br>
+        <input type="text" id="url4" name="url"><br><br>
+        <!-- Add a new element to output the citation -->
+        <div id="citation-output"></div>
+        <input type="button" value="Generate Citation" onclick="generateCitation4()">
+        </form>
+        <br>
+        <p>APA Website Citation (remember to indent from second line onwards):</p>
+        <!-- Remove the innerHTML assignment from this element -->
+        <p id="apa-website-citation"></p>
+
+        <script src="mla/functions.js"></script>
+        <script>
+        function generateCitation4() {
+            var lname4 = document.getElementById("lname4").value;
+            var fname4 = document.getElementById("fname4").value;
+            var article_title4 = document.getElementById("article_title4").value;
+            var site_title4 = document.getElementById("site_title4").value;
+            var month4 = document.getElementById("month4").value;
+            var day4 = document.getElementById("day4").value;
+            var year4 = document.getElementById("year4").value;
+            var url4 = document.getElementById("url4").value;
+
+            // Call the apaWebsiteCitation function with the values from the form inputs
+            var citation4 = apaWebsiteCitation(lname4, fname4, article_title4, site_title4, month4, day4, year4, url4);
+        
+            // Output the citation to the new element
+            document.getElementById("citation-output").innerHTML = citation4;
+
+            // Reset values
+            var lname4 = "";
+            var fname4 = "";
+            var article_title4 = "";
+            var site_title4 = "";
+            var month4 = "";
+            var day4 = "";
+            var year4 = "";
+            var url4 = "";
+        }
+        </script>
+    </div>
+
+    <!-- MLA to APA (BOOK) -->
+    <div id="mla-to-apa-book">
+        <h1>MLA to APA Converter (Book)</h1>
+        <p>Enter your MLA book citation below to convert it to APA format. To represent italicized text, surrond the text with "&lti&gt" and "&lt/i&gt".</p>
+        <form id="converter-form1">
+        <textarea id="mla-book-portion1" rows="5" cols="50"></textarea><br>
+        <button type="submit">Convert</button>
+        </form>
+        <br>
+        <p>Converted APA citation:</p>
+        <p id="apa-book-portion1"></p>
+
+        <script src="mla/functions.js"></script>
+        <script>
+        // Add event listener to the form submit button
+        const form1 = document.getElementById('converter-form1');
+        form1.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting
+
+            // Get the MLA citation from the textarea
+            const mlaCitation1 = document.getElementById('mla-book-portion1').value;
+
+            // Convert the MLA citation to APA format
+            const apaCitation1 = convertBookMlaToApa(mlaCitation1);
+
+            // Display the converted APA citation
+            document.getElementById('apa-book-portion1').innerHTML = apaCitation1;
+        });
+        </script>
+    </div>
+
+    <!-- APA to MLA (BOOK) -->
+    <div id="apa-to-mla-book">
+        <h1>APA to MLA Converter (Book)</h1>
+        <p>Enter your APA book citation below to convert it to MLA format. To represent italicized text, surrond the text with "&lti&gt" and "&lt/i&gt".</p>
+        <form id="converter-form2">
+        <textarea id="apa-book-citation2" rows="5" cols="50"></textarea><br>
+        <button type="submit">Convert</button>
+        </form>
+        <br>
+        <p>Converted MLA citation:</p>
+        <p id="mla-book-citation2"></p>
+
+        <script src="mla/functions.js"></script>
+        <script>
+        // Add event listener to the form submit button
+        const form2 = document.getElementById('converter-form2');
+        form2.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting
+
+            // Get the MLA citation from the textarea
+            const apaCitation2 = document.getElementById('apa-book-citation2').value;
+
+            // Convert the MLA citation to APA format
+            const mlaCitation2 = convertBookApaToMla(apaCitation2);
+
+            // Display the converted APA citation
+            document.getElementById('mla-book-citation2').innerHTML = mlaCitation2;
+        });
+        </script>
+    </div>
+
+    <!-- MLA to APA (WEBSITE) -->
+    <div id="mla-to-apa-website">
+        <h1>MLA to APA Converter (Website)</h1>
+        <p>Enter your MLA website citation below to convert it to APA format. To represent italicized text, surrond the text with "&lti&gt" and "&lt/i&gt".</p>
+        <form id="converter-form3">
+        <textarea id="mla-website-citation3" rows="5" cols="50"></textarea><br>
+        <button type="submit">Convert</button>
+        </form>
+        <br>
+        <p>Converted APA citation:</p>
+        <p id="apa-website-citation3"></p>
+
+        <script src="mla/functions.js"></script>
+        <script>
+        // Add event listener to the form submit button
+        const form3 = document.getElementById('converter-form3');
+        form3.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting
+
+            // Get the MLA citation from the textarea
+            const mlaCitation3 = document.getElementById('mla-website-citation3').value;
+
+            // Convert the MLA citation to APA format
+            const apaCitation3 = convertWebsiteMlaToApa(mlaCitation3);
+
+            // Display the converted APA citation
+            document.getElementById('apa-website-citation3').innerHTML = apaCitation3;
+        });
+        </script>
+    </div>
+
+    <!-- APA TO MLA (WEBSITE) -->
+    <div id="apa-to-mla-website">
+        <h1>APA to MLA Converter (Website)</h1>
+        <p>Enter your APA website citation below to convert it to MLA format. To represent italicized text, surrond the text with "&lti&gt" and "&lt/i&gt".</p>
+        <form id="converter-form4">
+        <textarea id="apa-website-citation4" rows="5" cols="50"></textarea><br>
+        <button type="submit">Convert</button>
+        </form>
+        <br>
+        <p>Converted MLA citation:</p>
+        <p id="mla-website-citation4"></p>
+
+        <script src="mla/functions.js"></script>
+        <script>
+        // Add event listener to the form submit button
+        const form4 = document.getElementById('converter-form4');
+        form4.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting
+
+            // Get the APA citation from the textarea
+            const apaCitation4 = document.getElementById('apa-website-citation4').value;
+
+            // Convert the APA citation to MLA format
+            const mlaCitation4 = convertWebsiteApaToMla(apaCitation4);
+
+            // Debug: check if the mla-website-citation4 element is being correctly selected
+            const mlaCitationElement = document.getElementById('mla-website-citation4');
+            // console.log(mlaCitationElement);
+
+            // Display the converted MLA citation
+            document.getElementById('mla-website-citation4').innerHTML = mlaCitation4;
+
+            // Debug: check the value of the innerHTML property after it has been set
+            // console.log(document.getElementById('mla-website-citation4').innerHTML);
+        });
+        </script>
+    </div>
+
+    <div id="wow">
+        <!-- made you look -->
+    </div>
+</body>
+</html>
