@@ -1,4 +1,4 @@
-# JSMLA
+# MLA / APA Citation Generator and Converter
 
 Link to Citation Generator/Converter html site:
 http://htmlpreview.github.io/?https://github.com/ryanvoda/JSMLA/blob/master/generator-and-converter.html
